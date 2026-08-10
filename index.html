@@ -29,6 +29,11 @@ section{padding:96px 0}.section-head{display:flex;justify-content:space-between;
 .cta{padding:88px 0;background:linear-gradient(135deg,#171310 0%,#0c0c0d 40%,#15110c 100%);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
 .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}.contact-card{padding:32px;background:#151516;border:1px solid rgba(255,255,255,.06)}.contact-card p{margin:6px 0;color:var(--muted)}.contact-list a{display:block;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:18px}.contact-list a:last-child{border-bottom:0}
 footer{padding:26px 0 40px;color:#8e877c;font-size:13px}.subtle{font-size:13px;color:#998f83}.floating{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;flex-direction:column;gap:10px}.floating a{padding:14px 18px;background:var(--gold);color:#111;font-weight:800;box-shadow:0 10px 30px rgba(0,0,0,.25)}.floating a:last-child{background:#fff}
+
+.style-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.style-card{background:#0f1011;border:1px solid rgba(255,255,255,.08);overflow:hidden}.style-card img{width:100%;aspect-ratio:16/9;object-fit:cover}.style-card .info{padding:20px 22px 24px}.style-card h3{font-size:24px;margin-bottom:10px}.style-card p{margin:0;color:var(--muted)}
+.offer-detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:26px}.offer-detail{padding:24px;background:#111;border:1px solid rgba(255,255,255,.06)}.offer-detail strong{display:block;color:var(--gold2);text-transform:uppercase;font-size:12px;letter-spacing:1px;margin-bottom:10px}.offer-detail ul{margin:0;padding-left:18px;color:var(--muted)}.offer-detail li{margin-bottom:8px}
+@media (max-width:1080px){.style-grid,.offer-detail-grid{grid-template-columns:1fr}}
+
 @media (max-width:1080px){.offer-grid,.blog-grid,.process,.value-grid,.gallery{grid-template-columns:repeat(2,1fr)}.grid-2,.contact-grid,.arch{grid-template-columns:1fr}.about-photo{min-height:420px}}
 @media (max-width:760px){header{position:static}.nav{padding:16px 0;align-items:flex-start}.nav,nav,.section-head,.actions,.hero-note{display:block}.nav a, .actions a{margin-right:8px;margin-top:8px;display:inline-block}h1{font-size:42px}.stats,.offer-grid,.gallery,.process,.faq,.blog-grid,.value-grid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}.about-photo{min-height:300px}.floating{right:12px;left:12px;bottom:12px}.floating a{text-align:center}}
 </style>
@@ -39,8 +44,10 @@ footer{padding:26px 0 40px;color:#8e877c;font-size:13px}.subtle{font-size:13px;c
     <a href="#start" class="logo">K&T<small>STUDIO STYLU I SMAKU</small><span>Wnętrza premium · cała Polska</span></a>
     <nav>
       <a href="#onas">O nas</a>
+      <a href="#style">Style</a>
       <a href="#oferta">Oferta</a>
       <a href="#realizacje">Realizacje</a>
+      <a href="#inwestorzy">Dla inwestorów</a>
       <a href="#proces">Proces</a>
       <a href="#architekci">Dla architektów</a>
       <a href="#blog">Blog</a>
@@ -107,20 +114,47 @@ footer{padding:26px 0 40px;color:#8e877c;font-size:13px}.subtle{font-size:13px;c
     </div>
   </section>
 
+
+  <section id="style">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Style i kierunki estetyczne</span>
+          <h2>Różne klimaty, jeden standard premium.</h2>
+        </div>
+        <p>Pokazujemy kilka kierunków estetycznych, w których poruszamy się najczęściej. Każdy z nich ma własny charakter, ale łączy je jakość, spójność i dbałość o detal. Wszystkie zdjęcia w tej sekcji są już ostre i poprawione.</p>
+      </div>
+      <div class="style-grid">
+        <article class="style-card"><img src="assets/style-old-money.jpg" alt="Old Money Modern"><div class="info"><span class="tag">Wizualizacja koncepcyjna AI</span><h3>Old Money Modern</h3><p>Klasyczne podziały ścian, szlachetne materiały, wyważona elegancja i ponadczasowy luksus bez przesady.</p></div></article>
+        <article class="style-card"><img src="assets/style-soft-coastal.jpg" alt="Soft Coastal Luxury"><div class="info"><span class="tag">Wizualizacja koncepcyjna AI</span><h3>Soft Coastal Luxury</h3><p>Jasna paleta, miękkie światło i spokojny charakter wnętrza inspirowanego naturalną elegancją i odpoczynkiem.</p></div></article>
+        <article class="style-card"><img src="assets/style-dark-contemporary.jpg" alt="Dark Contemporary"><div class="info"><span class="tag">Wizualizacja koncepcyjna AI</span><h3>Dark Contemporary</h3><p>Ciemne drewno, kamień, nastrojowe oświetlenie i nowoczesna architektura budująca efekt klasy premium.</p></div></article>
+        <article class="style-card"><img src="assets/style-quiet-luxury.jpg" alt="Quiet Luxury"><div class="info"><span class="tag">Wizualizacja koncepcyjna AI</span><h3>Quiet Luxury</h3><p>Spokój formy, wysoka klasa tkanin i subtelna kompozycja materiałów tworząca harmonijne, prywatne wnętrze.</p></div></article>
+      </div>
+    </div>
+  </section>
+
   <section id="oferta" style="background:#101011">
     <div class="wrap">
       <div class="section-head">
         <div>
           <span class="eyebrow">Oferta</span>
-          <h2>Pełna obsługa inwestycji premium.</h2>
+          <h2>Rozbudowana oferta dla klientów, którzy oczekują pełnej obsługi premium.</h2>
         </div>
-        <p>Pracujemy przy apartamentach, domach i prywatnych inwestycjach, w których liczy się jakość wykonania, spokojny proces i efekt, który broni się przez lata.</p>
+        <p>Nie działamy przypadkowo. Prowadzimy klienta przez cały proces: od układu funkcjonalnego i estetyki, przez materiały i harmonogram, aż po dopracowanie ostatniego detalu. Dzięki temu inwestor dostaje spójne wnętrze i spokojny proces.</p>
       </div>
       <div class="offer-grid">
-        <div class="offer-card"><h3>Projekt wnętrza</h3><p>Koncepcja funkcjonalna i estetyczna dopasowana do stylu życia, standardu nieruchomości i oczekiwań inwestora.</p></div>
-        <div class="offer-card"><h3>Wykończenie pod klucz</h3><p>Koordynacja wykonania, harmonogram, kontrola jakości i dopracowanie detalu od początku do końca.</p></div>
-        <div class="offer-card"><h3>Domy i apartamenty premium</h3><p>Wnętrza nowoczesne, modern classic, old money modern, quiet luxury i realizacje szyte na miarę.</p></div>
-        <div class="offer-card"><h3>Nadzór i doradztwo</h3><p>Wsparcie przy doborze materiałów, wyposażenia, rozwiązań funkcjonalnych i standardu wykończenia.</p></div>
+        <div class="offer-card"><h3>Projekt wnętrza</h3><p>Układ funkcjonalny, kierunek estetyczny, materiały, klimat wnętrza i rozwiązania dopasowane do codziennego życia klienta.</p></div>
+        <div class="offer-card"><h3>Kompleksowe wykończenie pod klucz</h3><p>Koordynacja wykonania, kontrola jakości, pilnowanie harmonogramu i doprowadzenie inwestycji do finalnego efektu.</p></div>
+        <div class="offer-card"><h3>Domy i apartamenty premium</h3><p>Realizacje prywatne o podwyższonym standardzie: nowoczesne, modern classic, old money modern, quiet luxury i rozwiązania autorskie.</p></div>
+        <div class="offer-card"><h3>Nadzór i doradztwo</h3><p>Wsparcie przy wyborze materiałów, zabudów, stolarki, armatury, oświetlenia, wyposażenia i rozwiązań wykonawczych.</p></div>
+        <div class="offer-card"><h3>Przebudowy i modernizacje</h3><p>Zmiana układu funkcjonalnego, odświeżenie nieruchomości lub pełna transformacja wnętrza pod nowy standard.</p></div>
+        <div class="offer-card"><h3>Współpraca z architektami</h3><p>Szanujemy założenia projektu i pomagamy dowieźć jakość wykonania na poziomie oczekiwanym przez klienta premium.</p></div>
+        <div class="offer-card"><h3>Dobór materiałów i wyposażenia</h3><p>Tworzymy spójną selekcję materiałową, która dobrze wygląda dziś i pozostaje aktualna po latach użytkowania.</p></div>
+        <div class="offer-card"><h3>Obsługa inwestorów z całej Polski</h3><p>Działamy w Gdańsku i w całym kraju. Prowadzimy także realizacje wyjazdowe dla klientów, którym zależy na jednym partnerze od całości.</p></div>
+      </div>
+      <div class="offer-detail-grid">
+        <div class="offer-detail"><strong>W ramach współpracy możesz liczyć na</strong><ul><li>jasny proces współpracy i uporządkowane etapy,</li><li>wyczucie stylu oraz dopasowanie do budżetu i priorytetów,</li><li>sprawną komunikację i kulturę pracy,</li><li>koordynację decyzji projektowych z wykonaniem,</li><li>dbałość o detale, które budują efekt premium.</li></ul></div>
+        <div class="offer-detail"><strong>Najczęściej realizujemy</strong><ul><li>wykończenia apartamentów premium,</li><li>strefy dzienne z kuchnią i jadalnią,</li><li>sypialnie master i łazienki w standardzie hotelowym,</li><li>domy jednorodzinne projektowane kompleksowo,</li><li>wnętrza dla klientów ceniących prywatność i wysoki standard obsługi.</li></ul></div>
       </div>
     </div>
   </section>
@@ -149,6 +183,39 @@ footer{padding:26px 0 40px;color:#8e877c;font-size:13px}.subtle{font-size:13px;c
         <article class="project"><img src="assets/realizacja-01.jpg" alt="Wnętrze domu premium"><div class="info"><span class="tag">Kompleksowa realizacja</span><h4>Standard marki K&T</h4><p>Projektujemy i realizujemy wnętrza, które mają wyglądać dobrze dziś i za wiele lat.</p></div></article>
       </div>
       <div class="note-bar">Materiały wizualne na stronie przedstawiają wybrane realizacje, autorskie wizualizacje koncepcyjne oraz kierunki estetyczne przygotowane na potrzeby prezentacji standardu marki K&T Studio Stylu i Smaku. Dzięki temu całość pozostaje spójna, oryginalna i bezpieczna pod kątem praw autorskich.</div>
+    </div>
+  </section>
+
+
+  <section id="inwestorzy">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Dla inwestorów</span>
+          <h2>Wnętrza, które mają nie tylko wyglądać dobrze, ale również pracować na wartość nieruchomości.</h2>
+        </div>
+        <p>Projektujemy i realizujemy także apartamenty przeznaczone pod najem krótkoterminowy, najem premium oraz nieruchomości inwestycyjne. W takich projektach łączymy estetykę z trwałością, łatwością użytkowania i kontrolą kosztów eksploatacji.</p>
+      </div>
+      <div class="offer-detail-grid">
+        <div class="offer-detail">
+          <strong>Apartamenty pod wynajem krótkoterminowy</strong>
+          <ul>
+            <li>atrakcyjny efekt wizualny już na zdjęciach ofertowych,</li>
+            <li>materiały odporne na częste użytkowanie,</li>
+            <li>funkcjonalny układ i łatwe utrzymanie czystości,</li>
+            <li>detale budujące odczucie standardu premium.</li>
+          </ul>
+        </div>
+        <div class="offer-detail">
+          <strong>Nieruchomości inwestycyjne</strong>
+          <ul>
+            <li>rozwiązania podnoszące postrzeganą wartość nieruchomości,</li>
+            <li>rozsądny balans między efektem a budżetem,</li>
+            <li>spójny standard gotowy do wynajmu lub sprzedaży,</li>
+            <li>kompleksowe prowadzenie inwestycji od koncepcji do odbioru.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -192,30 +259,59 @@ footer{padding:26px 0 40px;color:#8e877c;font-size:13px}.subtle{font-size:13px;c
         </div>
         <div class="col">
           <h3>Z kim pracujemy</h3>
-          <p class="muted">Zapraszamy do współpracy architektów, inwestorów prywatnych, właścicieli apartamentów, domów i nieruchomości klasy premium. Działamy w Gdańsku i na terenie całej Polski.</p>
+          <p class="muted">Obsługujemy zarówno klientów prywatnych, jak i inwestorów, którzy oczekują wysokiego standardu, sprawnej realizacji oraz wnętrza dopasowanego do konkretnego celu inwestycji.</p>
+          <ul class="check-list">
+            <li>właściciele domów i apartamentów prywatnych,</li>
+            <li>inwestorzy przygotowujący apartamenty pod wynajem krótkoterminowy i premium,</li>
+            <li>właściciele mieszkań inwestycyjnych przeznaczonych na najem długoterminowy,</li>
+            <li>architekci i pracownie projektowe poszukujące sprawdzonego partnera wykonawczego,</li>
+            <li>inwestorzy kupujący nieruchomości do dalszej odsprzedaży lub podniesienia ich wartości,</li>
+            <li>biura nieruchomości i partnerzy obsługujący klientów segmentu premium.</li>
+          </ul>
+          <p class="muted">Działamy w Gdańsku i na terenie całej Polski. Zakres realizacji dopasowujemy do funkcji nieruchomości — inaczej projektujemy dom rodzinny, inaczej apartament inwestycyjny, a inaczej lokal przygotowany pod wymagającego gościa.</p>
           <div class="actions"><a href="#kontakt" class="btn">Porozmawiajmy o współpracy</a></div>
         </div>
       </div>
     </div>
   </section>
-
   <section id="blog" style="background:#101011">
     <div class="wrap">
       <div class="section-head">
         <div>
           <span class="eyebrow">Blog / Wiedza</span>
-          <h2>Treści, które budują zaufanie jeszcze przed pierwszym telefonem.</h2>
+          <h2>Praktyczna wiedza o wykończeniach premium.</h2>
         </div>
-        <p>Dodaliśmy sekcję blogową, żeby strona wyglądała na pełną i profesjonalną, a jednocześnie pomagała klientom podejmować lepsze decyzje.</p>
+        <p>Każdy artykuł możesz otworzyć i przeczytać w całości. To wzmacnia wiarygodność K&T Studio Stylu i Smaku i daje klientowi konkretną wartość jeszcze przed pierwszą rozmową.</p>
       </div>
       <div class="blog-grid">
-        <article class="blog-card"><h3>Ile trwa wykończenie wnętrza premium?</h3><p>Od czego zależy harmonogram i jak uniknąć opóźnień, które rozbijają cały proces inwestycji.</p><a href="#kontakt">Zapytaj o realizację</a></article>
-        <article class="blog-card"><h3>Jak wybierać materiały, które dobrze starzeją się po latach?</h3><p>Nie wszystko, co modne dziś, będzie dobrze wyglądało po kilku sezonach. Liczy się selekcja i proporcja.</p><a href="#kontakt">Skonsultuj projekt</a></article>
-        <article class="blog-card"><h3>Projekt i wykonanie w jednym miejscu — kiedy to ma największy sens?</h3><p>Jedna odpowiedzialność, mniej chaosu i większa kontrola jakości nad całym procesem.</p><a href="#kontakt">Porozmawiaj z nami</a></article>
-        <article class="blog-card"><h3>Wykończenie apartamentu premium — na czym nie warto oszczędzać?</h3><p>Są elementy, które budują klasę wnętrza i wpływają na komfort codziennego życia bardziej niż modne dodatki.</p><a href="#kontakt">Umów konsultację</a></article>
+        <article class="blog-card">
+          <span class="tag">Proces</span>
+          <h3>Ile trwa wykończenie wnętrza premium?</h3>
+          <p>Od czego zależy harmonogram, gdzie zwykle powstają opóźnienia i jak zaplanować realizację bez chaosu.</p>
+          <a href="blog-ile-trwa-wykonczenie.html">Czytaj artykuł →</a>
+        </article>
+        <article class="blog-card">
+          <span class="tag">Materiały</span>
+          <h3>Jak wybierać materiały, które dobrze starzeją się po latach?</h3>
+          <p>Drewno, kamień, armatura, stolarka i oświetlenie — co naprawdę buduje trwały standard premium.</p>
+          <a href="blog-materialy-premium.html">Czytaj artykuł →</a>
+        </article>
+        <article class="blog-card">
+          <span class="tag">Organizacja</span>
+          <h3>Projekt i wykonanie w jednym miejscu — kiedy to ma największy sens?</h3>
+          <p>Jedna odpowiedzialność, mniej błędów komunikacyjnych i lepsza kontrola nad detalem oraz budżetem.</p>
+          <a href="blog-projekt-i-wykonanie.html">Czytaj artykuł →</a>
+        </article>
+        <article class="blog-card">
+          <span class="tag">Budżet</span>
+          <h3>Wykończenie apartamentu premium — na czym nie warto oszczędzać?</h3>
+          <p>Elementy, które realnie wpływają na trwałość, komfort i końcowy efekt wnętrza przez wiele lat.</p>
+          <a href="blog-na-czym-nie-oszczedzac.html">Czytaj artykuł →</a>
+        </article>
       </div>
     </div>
   </section>
+
 
   <section>
     <div class="wrap">
