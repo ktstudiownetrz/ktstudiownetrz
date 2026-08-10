@@ -3,317 +3,271 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="K&T Studio — projektowanie i kompleksowe wykończenia wnętrz premium. 25 lat doświadczenia. Realizacje na terenie całej Polski.">
+<meta name="description" content="K&T Studio Stylu i Smaku — projektowanie i kompleksowe wykończenia wnętrz premium. Domy, apartamenty i inwestycje premium w całej Polsce.">
 <title>K&T Studio Stylu i Smaku | Wnętrza premium</title>
 <style>
-:root{
-  --bg:#0a0a0a; --bg2:#111111; --gold:#c7a15b; --gold2:#e2c487;
-  --text:#f7f3ee; --muted:#b7aea3; --line:#262626; --cream:#f4efe8;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}
-img{max-width:100%;display:block}
-a{text-decoration:none;color:inherit}
-.wrap{width:min(1180px,92%);margin:auto}
-header{position:sticky;top:0;z-index:30;background:rgba(10,10,10,.88);backdrop-filter:blur(10px);border-bottom:1px solid #181818}
-.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.logo{font-family:Georgia,serif;font-size:28px;letter-spacing:3px;color:var(--gold);line-height:.9}
-.logo small{display:block;font-family:Arial,sans-serif;font-size:10px;letter-spacing:5px;color:#dcc089;margin-top:8px}
-nav{display:flex;gap:22px;align-items:center;font-size:13px;text-transform:uppercase;letter-spacing:.9px}
-nav a{opacity:.88}
-nav a:hover{opacity:1;color:var(--gold)}
-.btn{display:inline-block;padding:15px 22px;background:var(--gold);color:#111;font-weight:700;text-transform:uppercase;letter-spacing:.9px;font-size:12px;border:0}
-.btn-outline{display:inline-block;padding:14px 20px;border:1px solid rgba(255,255,255,.35);font-size:12px;text-transform:uppercase;letter-spacing:.9px}
-.hero{min-height:760px;display:flex;align-items:center;background:
-linear-gradient(90deg,rgba(8,8,8,.95) 0%,rgba(8,8,8,.84) 36%,rgba(8,8,8,.2) 80%),
-url('assets/hero.jpg') center/cover no-repeat}
-.hero-copy{max-width:720px;padding:90px 0 80px}
-.eyebrow{color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:2px;font-size:12px}
-h1,h2,h3,h4{font-family:Georgia,serif;font-weight:400;margin:0}
-h1{font-size:clamp(46px,7vw,78px);line-height:1.02;margin:18px 0 22px}
-h2{font-size:clamp(34px,5vw,52px);line-height:1.08}
-.hero p{font-size:19px;line-height:1.75;color:#ddd;max-width:620px}
-.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0c0c0c}
-.stat{padding:28px 22px;text-align:center;border-right:1px solid var(--line)}
-.stat:last-child{border-right:0}
-.stat strong{display:block;font:30px Georgia;color:var(--gold)}
-.stat span{display:block;margin-top:6px;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#a7a19a}
-section{padding:92px 0}
-.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:36px}
-.section-head p{max-width:560px;color:var(--muted);line-height:1.75}
-.values{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.value{background:var(--bg2);border:1px solid var(--line);padding:28px}
-.value .nr{font:28px Georgia;color:var(--gold)}
-.value h3{font-size:24px;margin:10px 0 12px}
-.value p{color:#aaa;line-height:1.7;font-size:14px;margin:0}
-.styles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.card{background:var(--bg2);border:1px solid var(--line);overflow:hidden}
-.card img{width:100%;height:320px;object-fit:cover}
-.card .txt{padding:22px}
-.card h3{font-size:27px;margin-bottom:8px}
-.card p{margin:0;color:#aaa;line-height:1.7}
-.badge{display:inline-block;margin-bottom:10px;color:var(--gold);font-size:11px;text-transform:uppercase;letter-spacing:1px}
-.about{background:var(--cream);color:#111}
-.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
-.about-photo{background:#eae3d8;padding:16px}
-.about-photo img{width:100%;height:620px;object-fit:cover}
-.about p{line-height:1.85;color:#4b463f;font-size:17px}
-.points{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;margin:24px 0}
-.points div{padding-left:18px;position:relative;color:#4b463f;line-height:1.6}
-.points div:before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
-.sign{margin-top:18px;font:27px Georgia;color:#8f6b30}
-.offer{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.offer-box{border:1px solid var(--line);background:#111;padding:28px}
-.offer-box h3{font-size:24px;margin:12px 0}
-.offer-box p{font-size:14px;line-height:1.7;color:#aaa}
-.process{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-.step{padding:22px 6px 0;border-top:1px solid rgba(199,161,91,.45)}
-.step b{color:var(--gold);font-size:13px}
-.step h4{font-size:22px;margin:10px 0}
-.step p{font-size:14px;line-height:1.7;color:#999}
-.arch{background:#f2ece3;color:#111}
-.arch-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
-.arch p{line-height:1.85;color:#4f4a43}
-.panel{background:#111;color:#fff;padding:36px}
-.panel ul{margin:0;padding-left:18px;line-height:2;color:#d5d0c7}
-.contact{background:#090909}
-.contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:30px}
-.contact-card{border:1px solid var(--line);padding:35px;background:#111}
-.contact-card p{color:#bbb;line-height:1.8}
-.phone{font:36px Georgia;color:var(--gold)}
-.cta-band{background:linear-gradient(90deg,#141414, #0d0d0d);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:34px 0}
-.cta-band .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px}
-footer{padding:30px 0;color:#757575;border-top:1px solid #1b1b1b;font-size:13px}
-.muted-note{font-size:12px;color:#999;margin-top:14px}
-@media (max-width:980px){
-  nav{display:none}
-  .stats,.values,.styles-grid,.about-grid,.offer,.process,.arch-grid,.contact-grid,.points{grid-template-columns:1fr}
-  .hero{min-height:640px;background-position:65% center}
-  .hero-copy{padding:72px 0}
-  .about-photo img{height:480px}
-  .cta-band .wrap,.section-head{display:block}
-  .section-head p{margin-top:14px}
-}
+:root{--bg:#0c0c0d;--bg2:#141415;--panel:#171718;--gold:#c6a15a;--gold2:#ead2a0;--cream:#f5f0e7;--text:#f6f1e9;--muted:#b9b0a5;--line:#2a2a2d;--darkText:#171515}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}img{display:block;max-width:100%}a{text-decoration:none;color:inherit}.wrap{width:min(1200px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(12,12,13,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:84px}.logo{font-family:Georgia,serif;font-size:28px;line-height:.88;letter-spacing:2px;color:var(--gold)}.logo small{display:block;font-size:10px;font-family:Inter,Arial,sans-serif;letter-spacing:4px;color:var(--gold2);margin-top:8px}.logo span{display:block;font-size:11px;font-family:Inter,Arial,sans-serif;letter-spacing:2px;color:#bca276;margin-top:8px}
+nav{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end;align-items:center;font-size:12px;text-transform:uppercase;letter-spacing:1px}nav a{color:#ddd;opacity:.9}nav a:hover{color:var(--gold)}
+.btn,.btn-outline,.btn-light{display:inline-block;padding:14px 22px;border-radius:0;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px}.btn{background:var(--gold);color:#121212}.btn-outline{border:1px solid rgba(255,255,255,.35);color:#fff}.btn-light{background:#fff;color:#111}
+.hero{min-height:86vh;display:grid;align-items:center;background:linear-gradient(90deg,rgba(8,8,8,.92) 0%,rgba(8,8,8,.80) 35%,rgba(8,8,8,.22) 75%),url('assets/hero.jpg') center/cover no-repeat}.hero .wrap{padding:80px 0}.eyebrow{display:inline-block;color:var(--gold2);text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:700}h1,h2,h3,h4{font-family:Georgia,serif;font-weight:400;margin:0}h1{font-size:clamp(44px,7vw,76px);line-height:1.02;margin:18px 0 22px;max-width:860px}h2{font-size:clamp(32px,5vw,50px);line-height:1.08}h3{font-size:26px;line-height:1.2}.lead{font-size:20px;color:#e4ddd4;max-width:680px}.muted{color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.hero-note{display:flex;flex-wrap:wrap;gap:18px;margin-top:34px;color:#d6cec2;font-size:14px}.hero-note span{padding:10px 14px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.03)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#111}.stat{padding:28px 22px;border-right:1px solid var(--line);text-align:center}.stat:last-child{border-right:0}.stat strong{display:block;font:30px Georgia,serif;color:var(--gold)}.stat span{display:block;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#a59c91;margin-top:8px}
+section{padding:96px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:34px}.section-head p{max-width:620px;color:var(--muted)}
+.grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}.card{background:var(--panel);border:1px solid rgba(255,255,255,.06)}
+.about-copy{padding:38px}.about-photo img{height:100%;object-fit:cover}.about-photo{min-height:620px}.check-list{display:grid;gap:14px;margin:26px 0 0;padding:0;list-style:none}.check-list li{padding-left:24px;position:relative;color:#ddd}.check-list li:before{content:'•';position:absolute;left:0;top:0;color:var(--gold);font-size:22px;line-height:1}
+.value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:24px}.value-box{padding:22px;background:#101011;border:1px solid rgba(255,255,255,.06)}.value-box strong{display:block;color:var(--gold2);margin-bottom:8px;text-transform:uppercase;font-size:12px;letter-spacing:1px}
+.offer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.offer-card{padding:28px;background:linear-gradient(180deg,#171718 0%,#111 100%);border:1px solid rgba(255,255,255,.06)}.offer-card p{color:var(--muted);font-size:15px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project{background:#121212;border:1px solid rgba(255,255,255,.07);overflow:hidden}.project img{width:100%;aspect-ratio:4/3;object-fit:cover}.project .info{padding:18px 18px 20px}.tag{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--gold2);margin-bottom:8px}.project h4{font-size:24px;margin-bottom:8px}.project p{margin:0;color:var(--muted);font-size:14px}
+.note-bar{margin-top:18px;padding:18px 20px;border:1px solid rgba(198,161,90,.28);background:rgba(198,161,90,.06);color:#e9dcc1;font-size:14px}
+.process{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}.step{padding:26px 20px;background:#111;border:1px solid rgba(255,255,255,.06)}.step .no{color:var(--gold);font:34px Georgia,serif;display:block;margin-bottom:10px}.step p{margin:8px 0 0;color:var(--muted);font-size:14px}
+.arch{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.arch .col{padding:32px;background:#121213;border:1px solid rgba(255,255,255,.06)}
+.blog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.blog-card{padding:24px;background:#171718;border:1px solid rgba(255,255,255,.06)}.blog-card p{color:var(--muted);font-size:14px}.blog-card a{color:var(--gold2);font-size:12px;text-transform:uppercase;letter-spacing:1px;font-weight:700}
+.faq{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.faq .item{padding:22px;border:1px solid rgba(255,255,255,.08);background:#111214}.faq .item strong{display:block;margin-bottom:8px;color:#fff}
+.cta{padding:88px 0;background:linear-gradient(135deg,#171310 0%,#0c0c0d 40%,#15110c 100%);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}.contact-card{padding:32px;background:#151516;border:1px solid rgba(255,255,255,.06)}.contact-card p{margin:6px 0;color:var(--muted)}.contact-list a{display:block;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:18px}.contact-list a:last-child{border-bottom:0}
+footer{padding:26px 0 40px;color:#8e877c;font-size:13px}.subtle{font-size:13px;color:#998f83}.floating{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;flex-direction:column;gap:10px}.floating a{padding:14px 18px;background:var(--gold);color:#111;font-weight:800;box-shadow:0 10px 30px rgba(0,0,0,.25)}.floating a:last-child{background:#fff}
+@media (max-width:1080px){.offer-grid,.blog-grid,.process,.value-grid,.gallery{grid-template-columns:repeat(2,1fr)}.grid-2,.contact-grid,.arch{grid-template-columns:1fr}.about-photo{min-height:420px}}
+@media (max-width:760px){header{position:static}.nav{padding:16px 0;align-items:flex-start}.nav,nav,.section-head,.actions,.hero-note{display:block}.nav a, .actions a{margin-right:8px;margin-top:8px;display:inline-block}h1{font-size:42px}.stats,.offer-grid,.gallery,.process,.faq,.blog-grid,.value-grid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}.about-photo{min-height:300px}.floating{right:12px;left:12px;bottom:12px}.floating a{text-align:center}}
 </style>
 </head>
 <body>
 <header>
   <div class="wrap nav">
-    <a href="#start" class="logo">K&T<small>STUDIO STYLU I SMAKU</small></a>
+    <a href="#start" class="logo">K&T<small>STUDIO STYLU I SMAKU</small><span>Wnętrza premium · cała Polska</span></a>
     <nav>
       <a href="#onas">O nas</a>
-      <a href="#style">Style</a>
       <a href="#oferta">Oferta</a>
+      <a href="#realizacje">Realizacje</a>
       <a href="#proces">Proces</a>
       <a href="#architekci">Dla architektów</a>
+      <a href="#blog">Blog</a>
       <a href="#kontakt">Kontakt</a>
+      <a href="tel:+48693082259" class="btn">693 082 259</a>
     </nav>
-    <a class="btn" href="tel:+48693082259">Umów konsultację</a>
   </div>
 </header>
 
 <main id="start">
   <section class="hero">
     <div class="wrap">
-      <div class="hero-copy">
-        <div class="eyebrow">Generalny wykonawca wnętrz premium</div>
-        <h1>Tworzymy wnętrza, które zostają w pamięci na lata.</h1>
-        <p>K&T Studio łączy projektowanie i kompleksową realizację domów oraz apartamentów premium. Jeden odpowiedzialny partner, spokojny proces i wysoka jakość dopracowana w każdym detalu.</p>
-        <div class="actions">
-          <a class="btn" href="tel:+48693082259">Zadzwoń: 693 082 259</a>
-          <a class="btn-outline" href="#style">Zobacz aranżacje</a>
+      <span class="eyebrow">K&T Studio Stylu i Smaku</span>
+      <h1>Tworzymy wnętrza premium, które łączą styl, komfort i perfekcyjne wykonanie.</h1>
+      <p class="lead">Projektujemy i realizujemy domy, apartamenty oraz inwestycje klasy premium. Prowadzimy klienta od pierwszej rozmowy, przez dobór materiałów, aż po końcowe wykończenie i dopracowany detal.</p>
+      <div class="actions">
+        <a href="#kontakt" class="btn">Umów konsultację</a>
+        <a href="#realizacje" class="btn-outline">Zobacz realizacje</a>
+      </div>
+      <div class="hero-note">
+        <span>Dyskrecja i kultura współpracy</span>
+        <span>25 lat doświadczenia</span>
+        <span>Realizacje na terenie całej Polski</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats wrap">
+    <div class="stat"><strong>25+</strong><span>lat doświadczenia</span></div>
+    <div class="stat"><strong>Premium</strong><span>standard materiałów</span></div>
+    <div class="stat"><strong>1</strong><span>projekt + wykonanie</span></div>
+    <div class="stat"><strong>PL</strong><span>obsługa całej Polski</span></div>
+  </div>
+
+  <section id="onas">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">O nas</span>
+          <h2>Marka zbudowana na zaufaniu, jakości i wyczuciu stylu.</h2>
+        </div>
+        <p>W K&T Studio Stylu i Smaku stawiamy na estetykę, spokój współpracy i pełną odpowiedzialność za efekt końcowy. Dla naszych klientów liczy się nie tylko piękne wnętrze, ale także dyskrecja, terminowość i komfort całego procesu.</p>
+      </div>
+      <div class="grid-2 card">
+        <div class="about-photo"><img src="assets/tomasz.jpg" alt="Tomasz Jakubowski, K&T Studio Stylu i Smaku"></div>
+        <div class="about-copy">
+          <span class="eyebrow">Tomasz Jakubowski</span>
+          <h3>Założyciel K&T Studio Stylu i Smaku</h3>
+          <p class="muted">Tworzę wnętrza, w których liczy się proporcja, materiał i funkcja. Każdy projekt prowadzimy z dużą uwagą na detal i z myślą o realnym komforcie codziennego życia.</p>
+          <ul class="check-list">
+            <li>Dbamy o pełną kulturę współpracy i sprawną komunikację.</li>
+            <li>Szanujemy prywatność klientów i dotrzymujemy dyskrecji.</li>
+            <li>Prowadzimy inwestycję kompleksowo — od koncepcji po wykonanie.</li>
+            <li>Dobieramy rozwiązania trwałe, eleganckie i dopasowane do stylu życia inwestora.</li>
+          </ul>
+          <div class="value-grid">
+            <div class="value-box"><strong>Indywidualnie</strong>Dopasowujemy styl, układ i materiały do klienta, nie do szablonu.</div>
+            <div class="value-box"><strong>Odpowiedzialnie</strong>Bierzemy odpowiedzialność za estetykę i jakość całego procesu.</div>
+            <div class="value-box"><strong>Dyskretnie</strong>Współpracujemy z szacunkiem do prywatności i standardu premium.</div>
+            <div class="value-box"><strong>Kompleksowo</strong>Projekt, koordynacja i realizacja w jednym miejscu.</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="stats">
-    <div class="stat"><strong>25 lat</strong><span>doświadczenia</span></div>
-    <div class="stat"><strong>Cała Polska</strong><span>obszar działania</span></div>
-    <div class="stat"><strong>Projekt + wykonanie</strong><span>jedna odpowiedzialność</span></div>
-    <div class="stat"><strong>Premium</strong><span>jakość i dyskrecja</span></div>
-  </div>
+  <section id="oferta" style="background:#101011">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Oferta</span>
+          <h2>Pełna obsługa inwestycji premium.</h2>
+        </div>
+        <p>Pracujemy przy apartamentach, domach i prywatnych inwestycjach, w których liczy się jakość wykonania, spokojny proces i efekt, który broni się przez lata.</p>
+      </div>
+      <div class="offer-grid">
+        <div class="offer-card"><h3>Projekt wnętrza</h3><p>Koncepcja funkcjonalna i estetyczna dopasowana do stylu życia, standardu nieruchomości i oczekiwań inwestora.</p></div>
+        <div class="offer-card"><h3>Wykończenie pod klucz</h3><p>Koordynacja wykonania, harmonogram, kontrola jakości i dopracowanie detalu od początku do końca.</p></div>
+        <div class="offer-card"><h3>Domy i apartamenty premium</h3><p>Wnętrza nowoczesne, modern classic, old money modern, quiet luxury i realizacje szyte na miarę.</p></div>
+        <div class="offer-card"><h3>Nadzór i doradztwo</h3><p>Wsparcie przy doborze materiałów, wyposażenia, rozwiązań funkcjonalnych i standardu wykończenia.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="realizacje">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Realizacje</span>
+          <h2>Wybrane wnętrza i kierunki estetyczne marki.</h2>
+        </div>
+        <p>Przygotowaliśmy rozbudowaną galerię, aby klient od razu widział standard estetyczny K&T Studio Stylu i Smaku — od nowoczesnego apartamentu, przez modern classic, po ciepłe wnętrza old money modern.</p>
+      </div>
+      <div class="gallery">
+        <article class="project"><img src="assets/realizacja-01.jpg" alt="Nowoczesny apartament premium"><div class="info"><span class="tag">Apartament premium</span><h4>Nowoczesny salon z kuchnią</h4><p>Spójna kompozycja, naturalne materiały, ciepłe światło i elegancki detal.</p></div></article>
+        <article class="project"><img src="assets/realizacja-02.jpg" alt="Salon w stylu klasycznym"><div class="info"><span class="tag">Modern classic</span><h4>Salon z charakterem</h4><p>Miękkie proporcje, ponadczasowa paleta i wnętrze zaprojektowane do odpoczynku.</p></div></article>
+        <article class="project"><img src="assets/realizacja-03.jpg" alt="Luksusowa łazienka"><div class="info"><span class="tag">Strefa spa</span><h4>Łazienka z widokiem</h4><p>Kamień, miękkie światło i prywatny klimat hotelowego wellness.</p></div></article>
+        <article class="project"><img src="assets/realizacja-04.jpg" alt="Sypialnia premium"><div class="info"><span class="tag">Quiet luxury</span><h4>Sypialnia premium</h4><p>Przytulna strefa nocna z wyważonymi barwami i spokojną elegancją.</p></div></article>
+        <article class="project"><img src="assets/realizacja-05.jpg" alt="Nowoczesna łazienka premium"><div class="info"><span class="tag">Nowoczesne spa</span><h4>Łazienka z ogrodowym światłem</h4><p>Wysoki standard wykończenia, harmonia materiałów i prywatność.</p></div></article>
+        <article class="project"><img src="assets/realizacja-06.jpg" alt="Kuchnia premium z jadalnią"><div class="info"><span class="tag">Dark contemporary</span><h4>Kuchnia z jadalnią</h4><p>Mocny kamień, stolarka premium i klimat dopracowany w każdym detalu.</p></div></article>
+        <article class="project"><img src="assets/realizacja-07.jpg" alt="Reprezentacyjny hol z klatką schodową"><div class="info"><span class="tag">Dom jednorodzinny</span><h4>Reprezentacyjny hol</h4><p>Wejście, które od progu buduje wrażenie jakości i skali całej inwestycji.</p></div></article>
+        <article class="project"><img src="assets/realizacja-08.jpg" alt="Elegancka kuchnia i jadalnia"><div class="info"><span class="tag">Old money modern</span><h4>Kuchnia i jadalnia</h4><p>Szlachetne drewno, nastrojowe oświetlenie i luksus bez przesady.</p></div></article>
+        <article class="project"><img src="assets/realizacja-09.jpg" alt="Salon premium z kominkiem"><div class="info"><span class="tag">Classic luxury</span><h4>Salon z kominkiem</h4><p>Wnętrze z klasą — ciepłe, eleganckie i stworzone do życia na co dzień.</p></div></article>
+        <article class="project"><img src="assets/realizacja-10.jpg" alt="Jadalnia z marmurowym stołem"><div class="info"><span class="tag">Soft luxury</span><h4>Jadalnia z marmurem</h4><p>Jasna, luksusowa przestrzeń z subtelnymi złotymi akcentami i wyważoną formą.</p></div></article>
+        <article class="project"><img src="assets/realizacja-11.jpg" alt="Sypialnia w ciemnym klimacie"><div class="info"><span class="tag">Evening mood</span><h4>Sypialnia wieczorna</h4><p>Kameralny nastrój, miękkie tkaniny i światło tworzące wyjątkowy klimat.</p></div></article>
+        <article class="project"><img src="assets/realizacja-01.jpg" alt="Wnętrze domu premium"><div class="info"><span class="tag">Kompleksowa realizacja</span><h4>Standard marki K&T</h4><p>Projektujemy i realizujemy wnętrza, które mają wyglądać dobrze dziś i za wiele lat.</p></div></article>
+      </div>
+      <div class="note-bar">Materiały wizualne na stronie przedstawiają wybrane realizacje, autorskie wizualizacje koncepcyjne oraz kierunki estetyczne przygotowane na potrzeby prezentacji standardu marki K&T Studio Stylu i Smaku. Dzięki temu całość pozostaje spójna, oryginalna i bezpieczna pod kątem praw autorskich.</div>
+    </div>
+  </section>
+
+  <section id="proces" style="background:#101011">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Proces współpracy</span>
+          <h2>Przejrzysty proces od pierwszej rozmowy do finalnego odbioru.</h2>
+        </div>
+        <p>Klient ma wiedzieć, co dzieje się na każdym etapie. Dlatego pracujemy w czytelnym procesie, bez chaosu i bez przypadkowych decyzji.</p>
+      </div>
+      <div class="process">
+        <div class="step"><span class="no">01</span><h3>Konsultacja</h3><p>Poznanie potrzeb, stylu życia, nieruchomości i oczekiwanego standardu.</p></div>
+        <div class="step"><span class="no">02</span><h3>Koncepcja</h3><p>Układ funkcjonalny, kierunek estetyczny, materiały i główne założenia.</p></div>
+        <div class="step"><span class="no">03</span><h3>Plan realizacji</h3><p>Harmonogram, zakres prac, kolejność działań i przygotowanie wykonawcze.</p></div>
+        <div class="step"><span class="no">04</span><h3>Wykonanie</h3><p>Koordynacja ekip, kontrola jakości i dopracowanie rozwiązań w praktyce.</p></div>
+        <div class="step"><span class="no">05</span><h3>Odbiór</h3><p>Końcowe dopracowanie, finalna prezentacja i gotowe wnętrze do zamieszkania.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="architekci">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Dla architektów i partnerów</span>
+          <h2>Chcemy być pierwszym wyborem przy realizacjach premium.</h2>
+        </div>
+        <p>Jeżeli tworzysz projekty wnętrz lub prowadzisz inwestycje, możesz liczyć na partnera, który rozumie standard premium i potrafi go dowieźć w praktyce.</p>
+      </div>
+      <div class="arch">
+        <div class="col">
+          <h3>Co wnosimy do współpracy</h3>
+          <ul class="check-list">
+            <li>Szacunek do projektu i do założeń estetycznych.</li>
+            <li>Wysoką kulturę pracy na inwestycji.</li>
+            <li>Dbałość o detal, materiały i wykończenie.</li>
+            <li>Sprawną komunikację i terminową realizację.</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Z kim pracujemy</h3>
+          <p class="muted">Zapraszamy do współpracy architektów, inwestorów prywatnych, właścicieli apartamentów, domów i nieruchomości klasy premium. Działamy w Gdańsku i na terenie całej Polski.</p>
+          <div class="actions"><a href="#kontakt" class="btn">Porozmawiajmy o współpracy</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" style="background:#101011">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Blog / Wiedza</span>
+          <h2>Treści, które budują zaufanie jeszcze przed pierwszym telefonem.</h2>
+        </div>
+        <p>Dodaliśmy sekcję blogową, żeby strona wyglądała na pełną i profesjonalną, a jednocześnie pomagała klientom podejmować lepsze decyzje.</p>
+      </div>
+      <div class="blog-grid">
+        <article class="blog-card"><h3>Ile trwa wykończenie wnętrza premium?</h3><p>Od czego zależy harmonogram i jak uniknąć opóźnień, które rozbijają cały proces inwestycji.</p><a href="#kontakt">Zapytaj o realizację</a></article>
+        <article class="blog-card"><h3>Jak wybierać materiały, które dobrze starzeją się po latach?</h3><p>Nie wszystko, co modne dziś, będzie dobrze wyglądało po kilku sezonach. Liczy się selekcja i proporcja.</p><a href="#kontakt">Skonsultuj projekt</a></article>
+        <article class="blog-card"><h3>Projekt i wykonanie w jednym miejscu — kiedy to ma największy sens?</h3><p>Jedna odpowiedzialność, mniej chaosu i większa kontrola jakości nad całym procesem.</p><a href="#kontakt">Porozmawiaj z nami</a></article>
+        <article class="blog-card"><h3>Wykończenie apartamentu premium — na czym nie warto oszczędzać?</h3><p>Są elementy, które budują klasę wnętrza i wpływają na komfort codziennego życia bardziej niż modne dodatki.</p><a href="#kontakt">Umów konsultację</a></article>
+      </div>
+    </div>
+  </section>
 
   <section>
     <div class="wrap">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Standard współpracy</div>
-          <h2>To, co dla klienta <span>naprawdę ma znaczenie</span></h2>
+          <span class="eyebrow">FAQ</span>
+          <h2>Najczęstsze pytania klientów.</h2>
         </div>
-        <p>Wnętrze premium to nie tylko ładny obrazek. To sposób prowadzenia inwestycji, komunikacja, dyskrecja i pewność, że wszystko będzie dopięte na czas.</p>
+        <p>Ta sekcja wzmacnia wiarygodność strony i pomaga klientowi szybciej zdecydować się na kontakt.</p>
       </div>
-      <div class="values">
-        <div class="value"><div class="nr">01</div><h3>Zaufanie</h3><p>Budujemy współpracę w oparciu o spokój, jasne zasady i partnerskie podejście do klienta.</p></div>
-        <div class="value"><div class="nr">02</div><h3>Dyskrecja</h3><p>Szanujemy prywatność inwestorów i prowadzimy realizacje w sposób uporządkowany i nienachalny.</p></div>
-        <div class="value"><div class="nr">03</div><h3>Terminowość</h3><p>Dbamy o ustalenia, harmonogram i kontrolę każdego etapu prac, aby inwestycja przebiegała sprawnie.</p></div>
-        <div class="value"><div class="nr">04</div><h3>Detal</h3><p>Najwyższa jakość widoczna jest w proporcjach, materiałach i precyzji wykonania.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="style">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Autorskie aranżacje koncepcyjne</div>
-          <h2>Style, które najlepiej oddają <span>charakter K&T Studio</span></h2>
-        </div>
-        <p>Wszystkie poniższe obrazy są przygotowanymi dla marki K&T Studio autorskimi wizualizacjami koncepcyjnymi. Pokazują kierunek estetyczny — bez użycia cudzych fotografii realizacji.</p>
-      </div>
-
-      <div class="styles-grid">
-        <article class="card">
-          <img src="assets/hero.jpg" alt="Old money modern salon">
-          <div class="txt">
-            <div class="badge">Wizualizacja koncepcyjna AI</div>
-            <h3>Old Money Modern</h3>
-            <p>Klasyczne podziały ścian, szlachetne materiały, wyważona elegancja i ponadczasowy luksus bez przesady.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="assets/style-bath.jpg" alt="Luksusowa łazienka">
-          <div class="txt">
-            <div class="badge">Wizualizacja koncepcyjna AI</div>
-            <h3>Soft Coastal Luxury</h3>
-            <p>Jasna paleta, miękkie światło i spokojny charakter wnętrza inspirowanego odpoczynkiem oraz naturalną elegancją.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="assets/style-kitchen.jpg" alt="Nowoczesna kuchnia premium">
-          <div class="txt">
-            <div class="badge">Wizualizacja koncepcyjna AI</div>
-            <h3>Dark Contemporary</h3>
-            <p>Ciemne drewno, kamień, nastrojowe oświetlenie i nowoczesna architektura budująca efekt klasy premium.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="assets/style-bedroom.jpg" alt="Nowoczesna sypialnia premium">
-          <div class="txt">
-            <div class="badge">Wizualizacja koncepcyjna AI</div>
-            <h3>Quiet Luxury</h3>
-            <p>Spokój formy, wysokiej klasy tkaniny i subtelna kompozycja materiałów tworząca harmonijne, prywatne wnętrze.</p>
-          </div>
-        </article>
+      <div class="faq">
+        <div class="item"><strong>Czy działacie tylko w Trójmieście?</strong><span class="muted">Nie. Obsługujemy klientów w Gdańsku, Trójmieście oraz na terenie całej Polski.</span></div>
+        <div class="item"><strong>Czy można zlecić sam projekt?</strong><span class="muted">Tak. Możemy przygotować projekt lub poprowadzić inwestycję kompleksowo wraz z realizacją.</span></div>
+        <div class="item"><strong>Czy pomagacie w doborze materiałów i wyposażenia?</strong><span class="muted">Tak. Dobór materiałów, kolorystyki, oświetlenia i wyposażenia to ważna część naszej pracy.</span></div>
+        <div class="item"><strong>Czy współpracujecie z architektami?</strong><span class="muted">Tak. Jesteśmy otwarci na współpracę z architektami i partnerami przy realizacjach premium.</span></div>
       </div>
     </div>
   </section>
 
-  <section id="onas" class="about">
-    <div class="wrap about-grid">
-      <div class="about-photo">
-        <img src="assets/tomasz.jpg" alt="Tomasz Jakubowski - K&T Studio">
-      </div>
-      <div>
-        <div class="eyebrow">O nas</div>
-        <h2>Doświadczenie, kultura współpracy i <span>pełna odpowiedzialność</span></h2>
-        <p>K&T Studio prowadzi Tomasz Jakubowski. Od 25 lat jest związany z branżą wykończeń i realizacji wnętrz, dzięki czemu łączy praktyczne doświadczenie wykonawcze z wyczuciem estetyki oraz zrozumieniem potrzeb wymagających klientów.</p>
-        <p>Tworzymy i prowadzimy inwestycje w taki sposób, aby klient czuł spokój i bezpieczeństwo na każdym etapie. Dla nas luksus to nie tylko efekt wizualny, ale także zaufanie, dyskrecja, porządek pracy i wysoka kultura współpracy.</p>
-        <div class="points">
-          <div>dbamy o klienta i jego komfort decyzyjny</div>
-          <div>dotrzymujemy ustaleń i terminów</div>
-          <div>zapewniamy dyskrecję i profesjonalne prowadzenie inwestycji</div>
-          <div>pilnujemy jakości wykonania w każdym detalu</div>
-          <div>prowadzimy realizacje w sposób uporządkowany i transparentny</div>
-          <div>stawiamy na wnętrza ponadczasowe, a nie przypadkowe trendy</div>
-        </div>
-        <p>K&T Studio realizuje projekty na terenie całej Polski, koncentrując się na domach, apartamentach oraz wnętrzach premium dopasowanych do stylu życia właścicieli.</p>
-        <div class="sign">Tomasz Jakubowski</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="oferta">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Oferta</div>
-          <h2>Kompleksowa obsługa od <span>koncepcji do odbioru</span></h2>
-        </div>
-        <p>Klient nie musi osobno koordynować projektanta, ekip, dostawców i terminów. K&T Studio przejmuje proces i prowadzi go konsekwentnie od początku do końca.</p>
-      </div>
-      <div class="offer">
-        <div class="offer-box"><div class="eyebrow">01</div><h3>Projekt wnętrza</h3><p>Funkcja, estetyka, układ przestrzeni oraz dobór materiałów dopasowany do budżetu i charakteru nieruchomości.</p></div>
-        <div class="offer-box"><div class="eyebrow">02</div><h3>Wykończenie pod klucz</h3><p>Koordynacja prac budowlanych i wykończeniowych, nadzór nad detalem oraz doprowadzenie wnętrza do gotowości.</p></div>
-        <div class="offer-box"><div class="eyebrow">03</div><h3>Domy i apartamenty premium</h3><p>Obsługa wymagających realizacji prywatnych, w których liczy się styl, jakość i odpowiedzialność.</p></div>
-        <div class="offer-box"><div class="eyebrow">04</div><h3>Nadzór jakości</h3><p>Kontrola harmonogramu, komunikacji i standardu wykonania, aby klient otrzymał dopracowany efekt końcowy.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="proces">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Proces współpracy</div>
-          <h2>Prosty i przejrzysty <span>model działania</span></h2>
-        </div>
-      </div>
-      <div class="process">
-        <div class="step"><b>01</b><h4>Pierwsza rozmowa</h4><p>Poznanie nieruchomości, metrażu, budżetu oraz oczekiwanego standardu wykończenia.</p></div>
-        <div class="step"><b>02</b><h4>Koncepcja</h4><p>Określenie kierunku estetycznego, materiałów i założeń funkcjonalnych dla inwestycji.</p></div>
-        <div class="step"><b>03</b><h4>Wycena</h4><p>Przedstawienie zakresu prac, warunków współpracy i harmonogramu realizacji.</p></div>
-        <div class="step"><b>04</b><h4>Realizacja</h4><p>Kompleksowe prowadzenie inwestycji, nadzór i kontrola jakości na każdym etapie.</p></div>
-        <div class="step"><b>05</b><h4>Odbiór wnętrza</h4><p>Przekazanie gotowej przestrzeni przygotowanej do zamieszkania lub użytkowania.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="architekci" class="arch">
-    <div class="wrap arch-grid">
-      <div>
-        <div class="eyebrow">Dla architektów</div>
-        <h2>Partner wykonawczy, który <span>szanuje projekt i detal</span></h2>
-        <p>Współpracujemy z architektami przy realizacjach wymagających wysokiego standardu wykonawczego. Naszym celem jest wierne przełożenie wizji projektowej na efekt końcowy bez przypadkowych uproszczeń, chaosu czy obniżania jakości.</p>
-        <p>Jeżeli szukasz wykonawcy, który rozumie wartość projektu, pilnuje komunikacji i potrafi doprowadzić inwestycję do końca w standardzie premium — porozmawiajmy.</p>
-      </div>
-      <div class="panel">
-        <h3 style="font-size:32px;margin:0 0 18px;">Współpraca z K&T Studio</h3>
-        <ul>
-          <li>czytelna komunikacja i jedna odpowiedzialność</li>
-          <li>wysoka kultura współpracy oraz dyskrecja</li>
-          <li>kontrola jakości i estetyki wykonania</li>
-          <li>koordynacja prac oraz dostawców</li>
-          <li>realizacje na terenie całej Polski</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <div class="cta-band">
-    <div class="wrap">
-      <div>
-        <div class="eyebrow">K&T Studio</div>
-        <h3 style="font-size:34px;margin-top:8px;">Porozmawiajmy o Twoim domu lub apartamencie.</h3>
-      </div>
-      <a class="btn" href="tel:+48693082259">Zadzwoń teraz</a>
-    </div>
-  </div>
-
-  <section id="kontakt" class="contact">
+  <section class="cta" id="kontakt">
     <div class="wrap contact-grid">
       <div>
-        <div class="eyebrow">Kontakt</div>
-        <h2>Zacznijmy od spokojnej, <span>konkretnej rozmowy</span></h2>
-        <p style="color:#bbb;line-height:1.85">Jeżeli planujesz wykończenie domu, apartamentu lub wnętrza premium, skontaktuj się z nami. Najlepiej na początku przygotować podstawowe informacje: lokalizację, metraż, przewidywany termin rozpoczęcia i orientacyjny budżet.</p>
-        <p class="muted-note">Pocztę firmową i formularz kontaktowy możemy dodać w kolejnym kroku po Twojej akceptacji tej wersji strony.</p>
+        <span class="eyebrow">Kontakt</span>
+        <h2>Jeżeli chcesz stworzyć wnętrze premium, porozmawiajmy.</h2>
+        <p class="lead">Dom, apartament, inwestycja prywatna lub współpraca z architektem — zacznijmy od rozmowy o Twoich potrzebach i oczekiwanym standardzie.</p>
+        <div class="actions">
+          <a href="tel:+48693082259" class="btn">Zadzwoń teraz</a>
+          <a href="#start" class="btn-outline">Wróć na górę</a>
+        </div>
       </div>
       <div class="contact-card">
-        <p>Tomasz Jakubowski<br>K&T Studio<br>Realizacje: cała Polska</p>
-        <a class="phone" href="tel:+48693082259">693 082 259</a>
-        <p style="margin-top:22px;color:#bbb;">Jeśli chcesz, w następnym etapie przygotuję też wizytówkę, stopkę mailową i sekcję FAQ na stronie.</p>
+        <div class="contact-list">
+          <a href="tel:+48693082259"><strong>Telefon</strong><br>693 082 259</a>
+          <a href="https://ktstudiownetrz.pl" target="_blank"><strong>Strona</strong><br>ktstudiownetrz.pl</a>
+          <a href="#architekci"><strong>Współpraca</strong><br>Realizacje prywatne i partnerstwa projektowe</a>
+          <a href="#realizacje"><strong>Zakres</strong><br>Domy · apartamenty · wnętrza premium · cała Polska</a>
+        </div>
+        <p class="subtle">Poczta firmowa może zostać dodana później. Na ten moment najszybszy kontakt to telefon.</p>
       </div>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">© 2026 K&T Studio Stylu i Smaku · ktstudiownetrz.pl</div>
+  <div class="wrap">
+    © 2026 K&T Studio Stylu i Smaku · ktstudiownetrz.pl · Wnętrza premium · Gdańsk i cała Polska
+  </div>
 </footer>
+
+<div class="floating">
+  <a href="tel:+48693082259">Zadzwoń: 693 082 259</a>
+  <a href="#kontakt">Umów kontakt</a>
+</div>
 </body>
 </html>
